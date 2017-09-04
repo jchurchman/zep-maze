@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar Component renders a levitating man emoji by default 1`] = `
+<div>
+   emojify( ':levitate_tone3:' ) 
+</div>
+`;
