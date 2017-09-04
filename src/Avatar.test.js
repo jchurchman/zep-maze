@@ -4,7 +4,7 @@ import toJSON from 'enzyme-to-json';
 import { Avatar } from './Avatar';
 import { UP, DOWN, LEFT, RIGHT } from './Avatar.constants';
 
-describe ('Avatar Component', () => {
+describe('Avatar Component', () => {
 
     it('renders a levitating man emoji by default', () => {
         const wrapper = shallow(<Avatar />);
