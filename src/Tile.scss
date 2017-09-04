@@ -1,0 +1,19 @@
+:local(.wall){
+    background-color: #696969;
+    border: 4px outset #a9a9a9;
+}
+
+:local(.floor){
+    background-color: #C0C0C0;
+    border: 4px outset #a9a9a9;
+}
+
+:local(.start){
+    background-color: #FFFF00;
+    border: 4px outset #a9a9a9;    
+}
+
+:local(.end){
+    background-color: #0000FF;
+    border: 4px outset #a9a9a9;    
+}
