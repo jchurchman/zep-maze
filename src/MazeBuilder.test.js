@@ -18,7 +18,7 @@ const maze = {
 describe('MazeBuilder component', () => {
 
     it('renders a maze table when given a maze object', () => {
-        const wrapper = shallow(<MazeBuilder matrix={maze.matrix}/>);
+        const wrapper = shallow(<MazeBuilder matrix={maze.matrix} x={2} y={2}/>);
         expect(toJSON(wrapper)).toMatchSnapshot();
     });
     

@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MazeBuilder component renders a maze table when given a maze object 1`] = `
-<table>
+<table
+  className="Maze"
+  style={
+    Object {
+      "transform": "transform: translate( 80px, 80px )",
+    }
+  }
+>
   <tr>
     <Tile
       value="WALL"

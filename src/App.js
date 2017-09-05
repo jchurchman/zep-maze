@@ -10,6 +10,10 @@ class App extends Component {
     super(props);
   }
 
+  componentDidMount(){
+    
+  }
+
   render() {
     return (
       <MazeView MazeBuilder={MazeBuilder} Avatar={Avatar} />

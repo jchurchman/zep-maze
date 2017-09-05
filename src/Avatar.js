@@ -1,6 +1,6 @@
 import React from 'react';
 import {emojify} from 'react-emojione';
-import { UP, DOWN, LEFT, RIGHT } from './Avatar.constants';
+import { UP, DOWN, LEFT, RIGHT } from './Controller.constants';
 
 export function Avatar({ stance }) {
     switch(stance) {
