@@ -1,6 +1,6 @@
 import { UP, DOWN, LEFT, RIGHT } from './Controller.constants';
 
-export default ( state = { matrix, x: 0, y: 0 }, { type, payload }) => {
+export default ( state = { matrix: [], x: 0, y: 0 }, { type, payload }) => {
 	switch(type) {
         case UP:
             return {
