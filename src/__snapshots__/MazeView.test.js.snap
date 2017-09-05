@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MazeView component renders a div when no child components passed 1`] = `<div />`;
