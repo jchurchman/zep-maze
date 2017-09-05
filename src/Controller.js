@@ -10,10 +10,10 @@ class Controller extends Component {
 
     componentDidMount() {
         window.addEventListener('keypress', function(event) {
-            if( event.keycode === 38 ) return goUP();
-            if( event.keycode === 40 ) return goDOWN();
-            if( event.keycode === 37 ) return goLEFT();
-            if( event.keycode === 39 ) return goRIGHT();
+            if( event.keycode === 38 ) return this.state.dispatch(goUP());
+            if( event.keycode === 40 ) return this.state.dispatch(goDOWN());
+            if( event.keycode === 37 ) return this.state.dispatch(goLEFT());
+            if( event.keycode === 39 ) return this.state.dispatch(goRIGHT());
         })
     }
 
@@ -24,10 +24,10 @@ class Controller extends Component {
     render() {
         return (
             <div className="Button-Bar">
-                <button onClick={goUP}>Up</button>
-                <button onClick={goDOWN}>Down</button>
-                <button onClick={goLEFT}>Left</button>
-                <button onClick={goRIGHT}>Right</button>
+                <button onClick={this.state.dispatch(goUP)}>Up</button>
+                <button onClick={this.state.dispatch(goDOWN)}>Down</button>
+                <button onClick={this.state.dispatch(goLEFT)}>Left</button>
+                <button onClick={this.state.dispatch(goRIGHT)}>Right</button>
             </div>
         )
     }

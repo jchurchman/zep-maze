@@ -39,4 +39,8 @@ class MazeBuilder extends Component{
     )}
 }
 
-export default connect(state => state)(MazeBuilder);
+export default connect(state => ({
+    matrix: state.matrix,
+    x: state.x,
+    y: state.y
+}))(MazeBuilder);

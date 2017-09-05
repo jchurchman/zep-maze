@@ -4,6 +4,7 @@ import { MazeView } from './MazeView';
 import MazeBuilder from './MazeBuilder';
 import Avatar from './Avatar';
 import Controller from './Controller';
+import { connect } from 'react-redux';
 
 class App extends Component {
 
@@ -21,4 +22,9 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect (
+  state => ({
+    matrix: state.matrix,
+    x: state.x,
+    y: state.y
+  }))(App)
