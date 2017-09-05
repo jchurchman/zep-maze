@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import { MazeView } from './MazeView';
-import { MazeBuilder } from './MazeBuilder';
-import { Avatar } from './Avatar';
+import MazeBuilder from './MazeBuilder';
+import Avatar from './Avatar';
+import Controller from './Controller';
 
 class App extends Component {
 
@@ -10,13 +11,12 @@ class App extends Component {
     super(props);
   }
 
-  componentDidMount(){
-    
-  }
-
   render() {
     return (
-      <MazeView MazeBuilder={MazeBuilder} Avatar={Avatar} />
+      <div>
+        <MazeView />
+        <Controller />
+      </div>
     );
   }
 }

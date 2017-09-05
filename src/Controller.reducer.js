@@ -1,6 +1,18 @@
 import { UP, DOWN, LEFT, RIGHT } from './Controller.constants';
+import { WALL, FLOOR, START, END } from './Tile.constants';
 
-export default ( state = { matrix: [], x: 1, y: 1 }, { type, payload }) => {
+const maze = {
+    score: [],
+    matrix: [
+        [ WALL, WALL, WALL, WALL, WALL ],
+        [ WALL, START, WALL, END, WALL ],
+        [ WALL, FLOOR, WALL, FLOOR, WALL ],
+        [ WALL, FLOOR, FLOOR, FLOOR, WALL ],
+        [ WALL, WALL, WALL, WALL, WALL ],
+    ]
+}
+
+export default ( state = { matrix: maze.matrix, x: 1, y: 1 }, { type }) => {
 	switch(type) {
 	case UP:
 		if(state.matrix[ state.y-1][state.x] === 'WALL') return state;

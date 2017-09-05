@@ -1,26 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Tile } from './Tile';
+import { connect } from 'react-redux';
 
-export function MazeBuilder({ matrix, x, y }) {
+class MazeBuilder extends Component{
 
-    const xVal = x * 40;
-    const yVal = y * 40
-
-    const styles = {
-        transform: `transform: translate( ${ xVal }px, ${ yVal }px )`
+    constructor(props){
+        super(props);
+    }    
+    
+    componentDidMount() {
+        fetch('/api/mazes')
+            .then(res => res.json())
+            .then(mazes => mazes[0].matrix = this.state.matrix);
     }
 
-    return (
-        <table className={"Maze"} style={styles}>
-            {matrix.map( ( row, index ) => {
-                return (
-                    <tr key={index}>
+    render() {
+
+        const { x, y, matrix } = this.state;
+
+        const xVal = x * 40;
+        const yVal = y * 40
+        
+        const styles = {
+            transform: `transform: translate( ${ xVal }px, ${ yVal }px )`
+        }
+        return (
+            <table className={"Maze"} style={styles}>
+                {matrix.map( ( row, index ) => {
+                    return (
+                        <tr key={index}>
                         {row.map( ( tile, index ) => {
                             return <Tile key={index} value={tile}/>
                         })}
-                    </tr>
-                )
-            })}
-        </table>
-    )
+                        </tr>
+                    )
+                })}
+            </table>
+    )}
 }
+
+export default connect(state => state)(MazeBuilder);

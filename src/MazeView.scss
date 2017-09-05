@@ -1,4 +1,12 @@
-:local(.viewer){
-    overflow: hidden;
-    display: flex;
+:local(){
+    .local{
+        width: 120;
+        height: 120;
+        overflow: hidden;
+        display: flex;   
+    }
+
+    .Avatar{
+        justify-content: center;
+    }
 }
