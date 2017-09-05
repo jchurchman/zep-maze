@@ -1,7 +1,7 @@
 import React from 'react';
-import { goUP, goDOWN, goRIGHT, goLEFT } from './Controller.actions';
-import reducer from './Controller.reducer';
-import { WALL, FLOOR, START, END } from './Tile.constants';
+import { goUP, goDOWN, goRIGHT, goLEFT } from '../Controller/Controller.actions';
+import reducer from '../Controller/Controller.reducer';
+import { WALL, FLOOR, START, END } from '../Tile/Tile.constants';
 
 const maze = {
     score: [],

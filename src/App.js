@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import { MazeView } from './MazeView';
-import MazeBuilder from './MazeBuilder';
-import Avatar from './Avatar';
-import Controller from './Controller';
+import { MazeView } from './MazeView/MazeView';
+import MazeBuilder from './MazeBuilder/MazeBuilder';
+import Avatar from './Avatar/Avatar';
+import Controller from './Controller/Controller';
 import { connect } from 'react-redux';
 
 class App extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tile } from './Tile';
+import { Tile } from '../Tile/Tile';
 import { connect } from 'react-redux';
 
 class MazeBuilder extends Component{

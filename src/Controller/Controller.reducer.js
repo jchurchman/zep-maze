@@ -1,5 +1,5 @@
 import { UP, DOWN, LEFT, RIGHT } from './Controller.constants';
-import { WALL, FLOOR, START, END } from './Tile.constants';
+import { WALL, FLOOR, START, END } from '../Tile/Tile.constants';
 
 const maze = {
     score: [],

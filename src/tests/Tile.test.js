@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJSON from 'enzyme-to-json';
-import { Tile } from './Tile';
-import { WALL, FLOOR, START, END } from './Tile.constants';
+import { Tile } from '../Tile/Tile';
+import { WALL, FLOOR, START, END } from '../Tile/Tile.constants';
 
 describe('Tile component', () => {
 

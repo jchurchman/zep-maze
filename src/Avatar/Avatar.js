@@ -1,6 +1,6 @@
 import React from 'react';
 import { emojify } from 'react-emojione';
-import { UP, DOWN, LEFT, RIGHT } from './Controller.constants';
+import { UP, DOWN, LEFT, RIGHT } from '../Controller/Controller.constants';
 import { connect } from 'react-redux';
 
 

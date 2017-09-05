@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './MazeView.css';
-import MazeBuilder from './MazeBuilder';
-import Avatar from './Avatar';
+import MazeBuilder from '../MazeBuilder/MazeBuilder';
+import Avatar from '../Avatar/Avatar';
 
 import { goUP, goDOWN, goRIGHT, goLEFT } from './Controller.actions';
 import { connect } from 'react-redux';

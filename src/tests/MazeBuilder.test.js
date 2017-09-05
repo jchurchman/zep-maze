@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJSON from 'enzyme-to-json';
-import { MazeBuilder } from './MazeBuilder';
-import { WALL, FLOOR, START, END } from './Tile.constants';
+import { MazeBuilder } from '../MazeBuilder/MazeBuilder';
+import { WALL, FLOOR, START, END } from '../Tile/Tile.constants';
 
 const maze = {
     score: [],

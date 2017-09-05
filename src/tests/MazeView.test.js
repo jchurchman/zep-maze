@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJSON from 'enzyme-to-json';
-import { MazeView } from './MazeView';
-import { Avatar } from './Avatar';
-import { MazeBuilder } from './MazeBuilder';
-import { WALL, FLOOR, START, END } from './Tile.constants';
+import { MazeView } from '../MazeView/MazeView';
+import { Avatar } from '../Avatar/Avatar';
+import { MazeBuilder } from '../MazeBuilder';
+import { WALL, FLOOR, START, END } from '../Tile/Tile.constants';
 
 const maze = {
     score: [],

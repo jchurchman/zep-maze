@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJSON from 'enzyme-to-json';
-import { Avatar } from './Avatar';
-import { UP, DOWN, LEFT, RIGHT } from './Controller.constants';
+import { Avatar } from '../Avatar/Avatar';
+import { UP, DOWN, LEFT, RIGHT } from '../Controller/Controller.constants';
 
 describe('Avatar Component', () => {
 
