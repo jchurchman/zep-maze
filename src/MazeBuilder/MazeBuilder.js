@@ -2,21 +2,21 @@ import React, { Component } from 'react';
 import { Tile } from '../Tile/Tile';
 import { connect } from 'react-redux';
 
-class MazeBuilder extends Component{
+export class MazeBuilder extends Component{
 
     constructor(props){
         super(props);
     }    
     
-    componentDidMount() {
-        fetch('/api/mazes')
-            .then(res => res.json())
-            .then(mazes => mazes[0].matrix = this.state.matrix);
-    }
+    // componentDidMount() {
+    //     fetch('/api/mazes')
+    //         .then(res => res.json())
+    //         .then(mazes => mazes[0].matrix = this.state.matrix);
+    // }
 
     render() {
 
-        const { x, y, matrix } = this.state;
+        const { x, y, matrix } = this.props;
 
         const xVal = x * 40;
         const yVal = y * 40

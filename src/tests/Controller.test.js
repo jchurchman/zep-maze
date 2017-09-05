@@ -19,7 +19,7 @@ describe('Controller component', () => {
 	describe('reducer', () => {
 
 		it('has a default value of x: 0, y: 0', () => {
-			expect(reducer(undefined, {type: 'DUMMY' })).toEqual({ matrix: [], x: 1, y: 1});
+			expect(reducer(undefined, {type: 'DUMMY' })).toEqual({ matrix: maze.matrix, x: 1, y: 1});
         });
         
         it('goUP does nothing on invalid move', () => {
