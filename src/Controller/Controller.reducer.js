@@ -12,6 +12,21 @@ const maze = {
     ]
 }
 
+export const position = (state = [1, 1], { type, payload }) => {
+	switch(type) {
+		case MOVE:
+			return payload;		
+		default: 
+			return state;
+	}
+}
+
+export const gamestate = (state = 'ACTIVE', { type, payload }) => {
+	switch(type) {
+
+	}
+}
+
 export default ( state = { matrix: maze.matrix, x: 1, y: 1 }, { type }) => {
 	switch(type) {
 	case UP:
