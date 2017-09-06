@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MazeBuilder component renders a maze table when given a maze object 1`] = `
+exports[`MazeMapper component renders a maze table when given a maze object 1`] = `
 <table
   className="Maze"
   style={

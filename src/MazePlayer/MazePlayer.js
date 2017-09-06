@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './MazeView.css';
-import MazeBuilder from '../MazeBuilder/MazeBuilder';
+import styles from './MazePlayer.css';
+import MazeMapper from '../MazeMapper/MazeMapper';
 import Avatar from '../Avatar/Avatar';
 
 import { goUP, goDOWN, goRIGHT, goLEFT } from '../Controller/Controller.actions';
@@ -20,10 +20,10 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators({ goDOWN, goUP, goLEFT, goRIGHT }, dispatch);
 }
 
-export function MazeView() {
+export function MazePlayer() {
     return (
         <div className={styles}>
-            <MazeBuilder />
+            <MazeMapper />
             <Avatar />
         </div>
     )

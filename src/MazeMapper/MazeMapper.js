@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Tile } from '../Tile/Tile';
 import { connect } from 'react-redux';
 
-export class MazeBuilder extends Component{
+export class MazeMapper extends Component{
 
     constructor(props){
         super(props);
@@ -43,4 +43,4 @@ export default connect(state => ({
     matrix: state.matrix,
     x: state.x,
     y: state.y
-}))(MazeBuilder);
+}))(MazeMapper);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { MazeView } from './MazeView/MazeView';
-import MazeBuilder from './MazeBuilder/MazeBuilder';
+import { MazePlayer } from './MazePlayer/MazePlayer';
+import MazeMapper from './MazeMapper/MazeMapper';
 import Avatar from './Avatar/Avatar';
 import Controller from './Controller/Controller';
 import { connect } from 'react-redux';
@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <MazeView />
+        <MazePlayer />
         <Controller />
       </div>
     );
