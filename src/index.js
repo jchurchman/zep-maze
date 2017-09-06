@@ -7,6 +7,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import registerServiceWorker from './registerServiceWorker';
 import thunk from 'redux-thunk';
 import ControllerReducer from './Controller/Controller.reducer';
+import moveChecker from './Controller/Controller.middleware';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
