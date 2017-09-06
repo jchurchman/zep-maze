@@ -1,34 +1,41 @@
-import { UP, DOWN, LEFT, RIGHT } from './Controller.constants';
-import { WALL, FLOOR, START, END } from '../Tile/Tile.constants';
-
+import { MOVE } from './Controller.constants';
 
 export function goUP() {
-    return (dispatch, getState) => {
-        const { position } = getState();
-        dispatch({
-            type: MOVE,
-            payload: [position[0], position[1] - 1]
-        });
-    }
+	return (dispatch, getState) => {
+		const { position } = getState();
+		dispatch({
+			type: MOVE,
+			payload: [position[0], position[1] - 1]
+		});
+	};
 }
 
 export function goDOWN() {
-    return {
-        type: DOWN,
-        payload: null
-    };
+	return (dispatch, getState) => {
+		const { position } = getState();
+		dispatch({
+			type: MOVE,
+			payload: [position[0], position[1] + 1]
+		});
+	};
 }
 
 export function goRIGHT() {
-    return {
-        type: RIGHT,
-        payload: null
-    };
+	return (dispatch, getState) => {
+		const { position } = getState();
+		dispatch({
+			type: MOVE,
+			payload: [position[0] + 1, position[1] ]
+		});
+	};
 }
 
 export function goLEFT() {
-    return {
-        type: LEFT,
-        payload: null
-    };
+	return (dispatch, getState) => {
+		const { position } = getState();
+		dispatch({
+			type: MOVE,
+			payload: [position[0] - 1, position[1] ]
+		});
+	};
 }

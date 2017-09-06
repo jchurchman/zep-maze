@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { MazePlayer } from './MazePlayer/MazePlayer';
-import MazeMapper from './MazeMapper/MazeMapper';
-import Avatar from './Avatar/Avatar';
-import Controller from './Controller/Controller';
-import { connect } from 'react-redux';
+import MazePlayerContainer from './MazePlayer/MazePlayerContainer';
 
 class App extends Component {
 
@@ -15,16 +11,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <MazePlayer />
-        <Controller />
+        <MazePlayerContainer />
       </div>
     );
   }
 }
 
-export default connect (
-  state => ({
-    matrix: state.matrix,
-    x: state.x,
-    y: state.y
-  }))(App)
+export default App;

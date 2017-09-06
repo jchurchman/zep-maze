@@ -10,10 +10,10 @@ class Controller extends Component {
 
     componentDidMount() {
         window.addEventListener('keypress', function(event) {
-            if( event.keycode === 38 ) return this.state.dispatch(goUP());
-            if( event.keycode === 40 ) return this.state.dispatch(goDOWN());
-            if( event.keycode === 37 ) return this.state.dispatch(goLEFT());
-            if( event.keycode === 39 ) return this.state.dispatch(goRIGHT());
+            if( event.keycode === 38 ) return this.props.dispatch(goUP());
+            if( event.keycode === 40 ) return this.props.dispatch(goDOWN());
+            if( event.keycode === 37 ) return this.props.dispatch(goLEFT());
+            if( event.keycode === 39 ) return this.props.dispatch(goRIGHT());
         })
     }
 
@@ -24,13 +24,13 @@ class Controller extends Component {
     render() {
         return (
             <div className="Button-Bar">
-                <button onClick={this.state.dispatch(goUP)}>Up</button>
-                <button onClick={this.state.dispatch(goDOWN)}>Down</button>
-                <button onClick={this.state.dispatch(goLEFT)}>Left</button>
-                <button onClick={this.state.dispatch(goRIGHT)}>Right</button>
+                <button onClick={this.props.dispatch(goUP)}>Up</button>
+                <button onClick={this.props.dispatch(goDOWN)}>Down</button>
+                <button onClick={this.props.dispatch(goLEFT)}>Left</button>
+                <button onClick={this.props.dispatch(goRIGHT)}>Right</button>
             </div>
         )
     }
 }
 
-export default connect (state => state)(Controller);
+export default Controller;

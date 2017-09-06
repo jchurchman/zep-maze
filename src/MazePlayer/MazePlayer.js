@@ -2,28 +2,15 @@ import React from 'react';
 import styles from './MazePlayer.css';
 import MazeMapper from '../MazeMapper/MazeMapper';
 import Avatar from '../Avatar/Avatar';
+import ControllerContainer from '../Controller/ControllerContainer';
 
-import { goUP, goDOWN, goRIGHT, goLEFT } from '../Controller/Controller.actions';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+export default function MazePlayer({ mazes, loading, error, position}) {
 
-function mapStateToProps(state) {
-    return {
-        matrix: state.maze.matrix,
-        x: state.x,
-        y: state.y
-    };
-}
+    if(loading) return <div>Loading Mazes...</div>;
 
-function mapDispatchToProps(dispatch) {
-    dispatch(getMazes());
-    return bindActionCreators({ goDOWN, goUP, goLEFT, goRIGHT }, dispatch);
-}
-
-export function MazePlayer() {
     return (
-        <div className={styles}>
-            <MazeMapper />
+        <div>
+            <MazeMapper maze={mazes[0]} />
             <Avatar />
         </div>
     )
