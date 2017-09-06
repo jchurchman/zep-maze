@@ -1,16 +1,16 @@
 import * as actions from './constants';
 
-export function maze(state = [], action) {
+export function maze(state = null, action) {
     switch(action.type) {
-        case actions.FETCHING_MAZE:
+        case actions.FETCHED_MAZE:
             return action.payload;
-        case actions.ADDING_MAZE:
+        case actions.ADDED_MAZE:
             return [ ...state, action.payload];
         default: return state;
     }
 }
 
-export function mazeError( state = null, action) {
+export function error( state = null, action) {
     switch(action.type) {
         case actions.FETCHED_MAZE_ERROR:
         case actions.ADDING_MAZE_ERROR:
@@ -22,7 +22,7 @@ export function mazeError( state = null, action) {
     }
 }
 
-export function mazeLoading( state = false, action) {
+export function loading( state = false, action) {
     switch(action.type) {
         case actions.FETCHING_MAZE:
         case actions.ADDING_MAZE:

@@ -1,27 +1,28 @@
-:local(.wall){
-    height: 32;
-    width: 32;
-    background-color: #696969;
+$size: 48px;
+
+:local(.tile){
+    height: $size;
+    width: $size;
+    box-sizing: border-box;
     border: 4px outset #a9a9a9;
-}
-
-:local(.floor){
-    height: 32;
-    width: 32;
-    background-color: #C0C0C0;
-    border: 4px outset #a9a9a9;
-}
-
-:local(.start){
-    height: 32;
-    width: 32;
-    background-color: #FFFF00;
-    border: 4px outset #a9a9a9;    
-}
-
-:local(.end){
-    height: 32;
-    width: 32;
-    background-color: #0000FF;
-    border: 4px outset #a9a9a9;    
+    text-align: center;
+    vertical-align: middle;
+    &.wall{
+        background-color: #696969;
+        &:before{
+            background-image: "🜘";
+        }
+    }
+    &.floor{
+        background-color: #C0C0C0;
+    }
+    &.start{
+        background-color: #FFFF00;
+        &:before{
+            content: "🜘";
+        }
+    }
+    &.end{
+        background-color: #0000FF;
+    }
 }

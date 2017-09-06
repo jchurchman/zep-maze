@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Tile } from '../Tile/Tile';
 import { connect } from 'react-redux';
+import styles from './MazeMapper.css';
 
 export class MazeMapper extends Component{
 
@@ -16,31 +17,36 @@ export class MazeMapper extends Component{
 
     render() {
 
-        const { x, y, matrix } = this.props;
+        const { position, maze } = this.props;
 
-        const xVal = x * 40;
-        const yVal = y * 40
+        // const matrix = maze.matrix;
         
-        const styles = {
-            transform: `transform: translate( ${ xVal }px, ${ yVal }px )`
-        }
+        const xVal = position[0] * 44;
+        const yVal = position[1] * 44;
+        
+        const transform = `transform: translate( ${ xVal }px, ${ yVal }px )`;
+
         return (
-            <table className={"Maze"} style={styles}>
-                {matrix.map( ( row, index ) => {
-                    return (
-                        <tr key={index}>
-                        {row.map( ( tile, index ) => {
-                            return <Tile key={index} value={tile}/>
-                        })}
-                        </tr>
-                    )
-                })}
+            <table className={styles.maze} style={{transform}}>
+                <tbody>
+                    {maze.matrix.map( ( row, index ) => {
+                        return (
+                            <tr key={index}>
+                            {row.map( ( tile, index ) => {
+                                return <Tile key={index} value={tile}/>
+                            })}
+                            </tr>
+                        )
+                    })}
+                </tbody>
             </table>
     )}
 }
 
 export default connect(state => ({
-    matrix: state.matrix,
-    x: state.x,
-    y: state.y
+    position: state.position,
+    gamestate: state.gamestate,
+    maze: state.maze,
+    loading: state.loading,
+    error: state.error
 }))(MazeMapper);

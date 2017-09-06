@@ -4,15 +4,17 @@ import MazeMapper from '../MazeMapper/MazeMapper';
 import Avatar from '../Avatar/Avatar';
 import ControllerContainer from '../Controller/ControllerContainer';
 
-export default function MazePlayer({ mazes, loading, error, position}) {
+export default function MazePlayer({ maze, loading, error, position, gamestate }) {
 
-    if(loading) return <div>Loading Mazes...</div>;
+    if(loading || !maze) return <div>Loading Mazes...</div>;
 
     return (
-        <div>
-            <MazeMapper />
-            <Avatar />
-            <ControllerContainer />
+        <div className={styles.player}>
+            <div className="viewport">
+                <MazeMapper maze={maze} position={position}/>
+                <Avatar />
+            </div>
+            <ControllerContainer maze={maze} position={position} />
         </div>
     )
 }

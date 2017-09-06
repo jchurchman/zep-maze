@@ -1,23 +1,20 @@
-:local(.wall) {
-  height: 32;
-  width: 32;
-  background-color: #696969;
-  border: 4px outset #a9a9a9; }
-
-:local(.floor) {
-  height: 32;
-  width: 32;
-  background-color: #C0C0C0;
-  border: 4px outset #a9a9a9; }
-
-:local(.start) {
-  height: 32;
-  width: 32;
-  background-color: #FFFF00;
-  border: 4px outset #a9a9a9; }
-
-:local(.end) {
-  height: 32;
-  width: 32;
-  background-color: #0000FF;
-  border: 4px outset #a9a9a9; }
+@charset "UTF-8";
+:local(.tile) {
+  height: 48px;
+  width: 48px;
+  box-sizing: border-box;
+  border: 4px outset #a9a9a9;
+  text-align: center;
+  vertical-align: middle; }
+  :local(.tile).wall {
+    background-color: #696969; }
+    :local(.tile).wall:before {
+      background-image: "🜘"; }
+  :local(.tile).floor {
+    background-color: #C0C0C0; }
+  :local(.tile).start {
+    background-color: #FFFF00; }
+    :local(.tile).start:before {
+      content: "🜘"; }
+  :local(.tile).end {
+    background-color: #0000FF; }

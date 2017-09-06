@@ -1,14 +1,9 @@
 import React from 'react';
-import { emojify } from 'react-emojione';
+import  Emojify from 'react-emojione';
 import { connect } from 'react-redux';
-
+import styles from './Avatar.css'
 
 export default function Avatar() {
-    /* switch(stance) {
-        case UP: return ( <div className="Avatar"> emojify( ':point_up_tone3:' ) </div> );
-        case DOWN: return ( <div className="Avatar"> emojify( ':point_down_tone3:' ) </div> );
-        case RIGHT: return ( <div className="Avatar"> emojify(':point_right_tone3:') </div> );
-        case LEFT: return ( <div className="Avatar"> emojify( ':point_left_tone3:' ) </div> );
-        default: */return ( <div className="Avatar"> emojify( ':levitate_tone3:' ) </div>);
-    // }
+    
+    return ( <div className={styles.avatar}> <Emojify><span>:wink:</span></Emojify> </div>);
 }

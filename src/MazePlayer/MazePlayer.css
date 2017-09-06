@@ -1,8 +1,8 @@
-:local() .local {
-  width: 120;
-  height: 120;
-  overflow: hidden;
-  display: flex; }
-
-:local() .Avatar {
-  justify-content: center; }
+:local(.player) {
+  margin: 20px auto; }
+  :local(.player) .viewport {
+    width: 144px;
+    height: 144px;
+    overflow: hidden;
+    position: relative;
+    margin: auto; }

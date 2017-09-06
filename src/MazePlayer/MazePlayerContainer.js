@@ -7,12 +7,16 @@ import MazePlayer from './MazePlayer';
 
 function mapStateToProps(state) {
     return {
-        mazes: state.mazes,
-        position: state.position
+        maze: state.maze,
+        position: state.position,
+        loading: state.loading,
+        error: state.error,
+        gamestate: state.gamestate
     };
 }
 
 function mapDispatchToProps(dispatch) {
+    // dispatch(getMazes());
     dispatch(getOneMaze('59b0341d64889f1fd460af86'));
     return bindActionCreators({ getMazes, getOneMaze, addMaze }, dispatch);
 }

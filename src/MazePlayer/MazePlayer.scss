@@ -1,12 +1,13 @@
-:local(){
-    .local{
-        width: 120;
-        height: 120;
-        overflow: hidden;
-        display: flex;   
-    }
+$size: 144px;
 
-    .Avatar{
-        justify-content: center;
+
+:local(.player){
+    margin: 20px auto;
+    .viewport{
+        width: $size;
+        height: $size;
+        overflow: hidden;
+        position: relative;
+        margin: auto;
     }
 }
