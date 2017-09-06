@@ -10,8 +10,9 @@ export default function MazePlayer({ mazes, loading, error, position}) {
 
     return (
         <div>
-            <MazeMapper maze={mazes[0]} />
+            <MazeMapper />
             <Avatar />
+            <ControllerContainer />
         </div>
     )
 }
