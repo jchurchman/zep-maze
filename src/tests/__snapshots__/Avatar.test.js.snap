@@ -1,41 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Avatar Component renders a down pointing emoji when given down stance 1`] = `
-<div
-  className="Avatar"
->
-   emojify( ':point_down_tone3:' ) 
-</div>
-`;
-
-exports[`Avatar Component renders a left pointing emoji when given left stance 1`] = `
-<div
-  className="Avatar"
->
-   emojify( ':point_left_tone3:' ) 
-</div>
-`;
-
-exports[`Avatar Component renders a levitating man emoji by default 1`] = `
-<div
-  className="Avatar"
->
-   emojify( ':levitate_tone3:' ) 
-</div>
-`;
-
-exports[`Avatar Component renders a right pointing emoji when given right stance 1`] = `
-<div
-  className="Avatar"
->
-   emojify(':point_right_tone3:') 
-</div>
-`;
-
-exports[`Avatar Component renders a up pointing emoji when given up stance 1`] = `
-<div
-  className="Avatar"
->
-   emojify( ':point_up_tone3:' ) 
+exports[`Avatar Component renders a winky face emoji by default 1`] = `
+<div>
+   
+  <Emoji
+    codepoint="1f609"
+    style={
+      Object {
+        "backgroundImage": "url(https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/sprites/emojione.sprites.png)",
+      }
+    }
+  />
+   
 </div>
 `;

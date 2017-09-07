@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJSON from 'enzyme-to-json';
-import { MazePlayer } from '../MazePlayer/MazePlayer';
-import { Avatar } from '../Avatar/Avatar';
-import { MazeMapper } from '../MazeMapper/MazeMapper';
+import MazePlayer from '../MazePlayer/MazePlayer';
+import Avatar from '../Avatar/Avatar';
+import MazeMapper from '../MazeMapper/MazeMapper';
 import { WALL, FLOOR, START, END } from '../Tile/Tile.constants';
 
 const maze = {
@@ -18,15 +18,21 @@ const maze = {
 }
 
 describe('MazePlayer component', () => {
-    it('renders a div when no child components passed', () => {
-        const wrapper = shallow(<MazePlayer/>);
+    it('renders a  loading div when no maze passed', () => {
+        const wrapper = shallow(<MazePlayer 
+            maze={ null  } 
+            loading={ false }
+            error={ null }
+            position={[ 0, 0 ]}
+            gamestate={'ACTIVE'}
+        />);
         expect(toJSON(wrapper)).toMatchSnapshot();
     })
 
     it('renders a div with a maze and an avatar when child components passed', () => {
         const wrapper = shallow(
             <MazePlayer 
-                MazeMapper={<MazeMapper matrix={maze.matrix}/>}  
+                MazeMapper={MazeMapper}  
                 Avatar={Avatar}/>
             );
         expect(toJSON(wrapper)).toMatchSnapshot();

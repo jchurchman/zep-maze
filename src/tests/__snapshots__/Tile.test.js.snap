@@ -1,19 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tile component provides appropriate styling when passed a value Start styling 1`] = `
-<td>
-  START
-</td>
+<td
+  className="undefined start"
+/>
 `;
 
 exports[`Tile component provides appropriate styling when passed a value end styling 1`] = `
-<td>
-  END
-</td>
+<td
+  className="undefined end"
+/>
 `;
 
-exports[`Tile component provides appropriate styling when passed a value floor styling 1`] = `<td />`;
+exports[`Tile component provides appropriate styling when passed a value floor styling 1`] = `
+<td
+  className="undefined floor"
+/>
+`;
 
-exports[`Tile component provides appropriate styling when passed a value wall styling 1`] = `<td />`;
+exports[`Tile component provides appropriate styling when passed a value wall styling 1`] = `
+<td
+  className="undefined wall"
+/>
+`;
 
-exports[`Tile component renders an empty td element by default 1`] = `<td />`;
+exports[`Tile component renders an empty td element by default 1`] = `
+<td
+  className="undefined "
+/>
+`;

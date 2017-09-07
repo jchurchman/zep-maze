@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MazePlayer component renders a  loading div when no maze passed 1`] = `
+<div>
+  Loading Mazes...
+</div>
+`;
+
+exports[`MazePlayer component renders a div with a maze and an avatar when child components passed 1`] = `
+<div>
+  Loading Mazes...
+</div>
+`;
