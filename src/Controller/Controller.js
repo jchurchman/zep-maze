@@ -8,19 +8,19 @@ class Controller extends Component {
         super(props);
     }
 
-    handleMove = ({keycode}) => {
-        if( keycode === 38 ) return this.props.goUP();
-        if( keycode === 40 ) return this.props.goDOWN();
-        if( keycode === 37 ) return this.props.goLEFT();
-        if( keycode === 39 ) return this.props.goRIGHT();
+    handleMove = (event) => {
+        if( event.keyCode === 38 ) return this.props.goUP();
+        if( event.keyCode === 40 ) return this.props.goDOWN();
+        if( event.keyCode === 37 ) return this.props.goLEFT();
+        if( event.keyCode === 39 ) return this.props.goRIGHT();
     }
 
     componentDidMount() {
-        window.addEventListener('keypress', this.handleMove );
+        document.addEventListener('keydown', this.handleMove );
     }
 
     componentWillUnmount(){
-        window.removeEventListener('keypress', this.handleMove );
+        document.removeEventListener('keydown', this.handleMove );
     }
 
     render() {

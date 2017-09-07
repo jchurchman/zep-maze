@@ -35,7 +35,7 @@ export function goLEFT() {
 		const { position } = getState();
 		dispatch({
 			type: MOVE,
-			payload: [position[0] - 1, position[1] ]
+			payload: [ position[0] - 1, position[1] ]
 		});
 	};
 }

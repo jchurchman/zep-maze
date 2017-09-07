@@ -21,10 +21,10 @@ export class MazeMapper extends Component{
 
         // const matrix = maze.matrix;
         
-        const xVal = position[0] * 44;
-        const yVal = position[1] * 44;
+        const xVal = (position[0] - 1) * -48;
+        const yVal = (position[1] - 1) * -48;
         
-        const transform = `transform: translate( ${ xVal }px, ${ yVal }px )`;
+        const transform = `translate( ${ xVal }px, ${ yVal }px )`;
 
         return (
             <table className={styles.maze} style={{transform}}>

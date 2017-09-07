@@ -12,8 +12,13 @@ function mapStateToProps(state){
 
 }
 
-function mapDispatchToProps() {
-    return { goUP, goDOWN, goRIGHT, goLEFT };
+function mapDispatchToProps(dispatch) {
+    return { 
+		goUP() { dispatch(goUP());},
+		goDOWN() {dispatch(goDOWN());}, 
+		goRIGHT() {dispatch(goRIGHT());}, 
+		goLEFT() { dispatch(goLEFT());}
+	};
 }
 
 const ControllerContainer = connect(
