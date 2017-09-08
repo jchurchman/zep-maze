@@ -5,16 +5,6 @@ import styles from './MazeMapper.css';
 
 export class MazeMapper extends Component{
 
-    constructor(props){
-        super(props);
-    }    
-    
-    // componentDidMount() {
-    //     fetch('/api/mazes')
-    //         .then(res => res.json())
-    //         .then(mazes => mazes[0].matrix = this.state.matrix);
-    // }
-
     render() {
 
         const { position, maze } = this.props;

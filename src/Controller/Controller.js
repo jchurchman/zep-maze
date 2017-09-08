@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-// import { goUP, goDOWN, goRIGHT, goLEFT } from './Controller.actions';
-import { connect } from 'react-redux';
 
 class Controller extends Component {
     
-    constructor(props) {
-        super(props);
-    }
-
     handleMove = (event) => {
         if( event.keyCode === 38 ) return this.props.goUP();
         if( event.keyCode === 40 ) return this.props.goDOWN();
