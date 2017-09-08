@@ -13,11 +13,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <Router>
         <Home>
           <MazePlayerContainer/>
         </Home>
-      </div>
+      </Router>
     );
   }
 }
