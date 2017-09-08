@@ -7,7 +7,7 @@ exports[`Avatar Component renders a winky face emoji by default 1`] = `
     codepoint="1f609"
     style={
       Object {
-        "backgroundImage": "url(https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/sprites/emojione.sprites.png)",
+        "top": 0,
       }
     }
   />
