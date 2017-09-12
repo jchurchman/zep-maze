@@ -47,3 +47,38 @@ describe('getOneMaze', () => {
     });
 
 });
+
+describe('addMaze', () => {
+
+    it('successful add maze', () => {
+        const maze = { level: 'one' };
+        const api = { add: maze => Promise.resolve(maze) };
+        const dispatched = [];
+        const dispatch = (action) => dispatched.push(action);
+
+        const addMaze = makeAddMaze(api);
+        return addMaze(maze)(dispatch)
+            .then( () => {
+                expect(dispatched).toEqual([
+                    { type: ADDING_MAZE },
+                    { type: ADDED_MAZE, payload: maze }
+                ]);
+            });
+    });
+
+    it('failed add maze', () => {
+        const error = { error: 'the error' };
+        const api = { add: maze => Promise.reject(error) };
+        const dispatched = [];
+        const dispatch = (action) => dispatched.push(action);
+
+        const addMaze = makeAddMaze(api);
+        return addMaze()(dispatch)
+            .then( () => {
+                expect(dispatched).toEqual([
+                    { type: ADDING_MAZE },
+                    { type: ADDING_MAZE_ERROR, payload: error }
+                ]);
+            });
+    });
+});
