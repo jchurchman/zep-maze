@@ -17,9 +17,9 @@ const testInit = (reducer, expected) => {
 
 const testPassThruAndInit = (reducer, initial, { operator = 'strictEqual' } = {}) => {
     it('pass-thru', () => {
-        const state = {};
+        const state = {maze: null, error: null, loading: false};
         assert[operator](reducer(state, { type: 'NO_ACTION' }), state);
-    });
+    })
 
     it('initial value', () => {
         assert[operator](reducer(undefined, { type: 'NO_ACTION' }), initial);
