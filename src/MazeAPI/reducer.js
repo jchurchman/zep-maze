@@ -1,4 +1,8 @@
 import * as actions from './constants';
+import { combineReducers } from 'redux';
+
+
+export default (state = {}, action) => combineReducers({maze, error, loading})(state,action);
 
 export function maze(state = null, action) {
     switch(action.type) {
