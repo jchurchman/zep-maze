@@ -30,5 +30,20 @@ describe('getOneMaze', () => {
             });
     });
 
+    it('failed get maze', () => {
+        const error = 'the error';
+        const api = { get: () => Promise.reject({ error }) };
+        const dispatched = [];
+        const dispatch = (action) => dispatched.push(action);
 
-})
+        const getOneMaze = makeGetOneMaze(api);
+        return getOneMaze()(dispatch)
+            .then( () => {
+                expect(dispatched).toEqual([
+                    { type: FETCHING_MAZE },
+                    { type: FETCHED_MAZE_ERROR, payload: {error: 'the error'} }
+                ]);
+            });
+    });
+
+});
