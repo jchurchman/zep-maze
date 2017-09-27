@@ -8,27 +8,14 @@ import { Navigate } from '../Navigate/Navigate';
 
 const Hat = styled.div`
 background-color: #226764;
-height: 200px;
 h1 {
   text-align: center;
   font-family: 'Monoton', cursive;
   color:white;
   font-size: 11vw;
-  padding-top: 4vw;
+  padding-top: 2vw;
   letter-spacing: 4px;
   font-weight: normal;
-}
-h1:hover {
-  animation: change 6s ease-in-out 0s infinite alternate;
-}
-@keyframes change {
-  0% {color:white;left:20%;top: 50%;font-size:11vw}
-  20% {color:#63DC90}
-  40% {color:#1EAEDB}
-  60% {color:goldenrod}
-  75% {color:#1EAEDB}
-  85% {color:#63DC90}
-  100% {color:white;left:50%;top: 60%;font-size:15vw}
 }
 `
 

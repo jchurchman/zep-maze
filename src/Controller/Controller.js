@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import styles from './Controller.css';
+
 
 class Controller extends Component {
     
@@ -19,7 +21,7 @@ class Controller extends Component {
 
     render() {
         return (
-            <div className="Button-Bar">
+            <div className={styles.buttonBar}>
                 <button onClick={this.props.goUP}>Up</button>
                 <button onClick={this.props.goDOWN}>Down</button>
                 <button onClick={this.props.goLEFT}>Left</button>

@@ -13,7 +13,7 @@ const NavList = styled.ul`
 const NavItem = styled.li`
     display: inline-block;
     list-style-type: none;
-    margin: 10px 20px;
+    margin: 8px 20px 3px 20px;
 `
 
 const NavLink = props => <Link style={{ color: 'orange', textDecoration: 'none' }} {...props}/>;
