@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MazeMapper component renders a maze table when given a maze object 1`] = `
-<table
+<styled.table
   style={
     Object {
-      "transform": "translate( 48px, 48px )",
+      "transform": "translate( 0px, 0px )",
     }
   }
 >
@@ -95,5 +95,5 @@ exports[`MazeMapper component renders a maze table when given a maze object 1`] 
       />
     </tr>
   </tbody>
-</table>
+</styled.table>
 `;

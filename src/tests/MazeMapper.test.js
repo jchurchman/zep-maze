@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJSON from 'enzyme-to-json';
-import { MazeMapper } from '../MazeMapper/MazeMapper';
+import MazeMapper from '../MazeMapper/MazeMapper';
 import { WALL, FLOOR, START, END } from '../Tile/Tile.constants';
 
 const maze = {
@@ -18,7 +18,7 @@ const maze = {
 describe('MazeMapper component', () => {
 
     it('renders a maze table when given a maze object', () => {
-        const wrapper = shallow(<MazeMapper maze={maze} position={[ 0, 0 ]}/>);
+        const wrapper = shallow(<MazeMapper maze={maze} position={[ 1, 1 ]}/>);
         expect(toJSON(wrapper)).toMatchSnapshot();
     });
     

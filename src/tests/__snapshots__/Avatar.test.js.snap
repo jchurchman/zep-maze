@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Avatar Component renders a winky face emoji by default 1`] = `
-<div>
-   
+<styled.div>
   <Emoji
     codepoint="1f609"
     style={
@@ -11,6 +10,5 @@ exports[`Avatar Component renders a winky face emoji by default 1`] = `
       }
     }
   />
-   
-</div>
+</styled.div>
 `;

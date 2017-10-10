@@ -17,13 +17,23 @@ const maze = {
     ]
 }
 
+const badGame = {
+    maze: null, 
+    loading: false,
+    error: null
+}
+
+const goodGame = {
+    maze: maze,
+    loading: false,
+    error: null
+};
+
 describe('MazePlayer component', () => {
     it('renders a  loading div when no maze passed', () => {
         const wrapper = shallow(<MazePlayer 
-            maze={ null  } 
-            loading={ false }
-            error={ null }
-            position={[ 0, 0 ]}
+            game={{badGame}}
+            position={[ 1, 1 ]}
             gamestate={'ACTIVE'}
         />);
         expect(toJSON(wrapper)).toMatchSnapshot();
@@ -32,8 +42,10 @@ describe('MazePlayer component', () => {
     it('renders a div with a maze and an avatar when child components passed', () => {
         const wrapper = shallow(
             <MazePlayer 
-                MazeMapper={MazeMapper}  
-                Avatar={Avatar}/>
+                game={{goodGame}}
+                position={[ 1, 1]}
+                gamestate={'ACTIVE'}  
+            />
             );
         expect(toJSON(wrapper)).toMatchSnapshot();
     })
