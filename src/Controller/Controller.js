@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import styles from './Controller.css';
+import styled from 'styled-components';
 
+const ButtonBar = styled.div`
+    text-align: center;
+    margin-top: 2vw;
+`
 
 class Controller extends Component {
     
@@ -22,12 +26,12 @@ class Controller extends Component {
     render() {
 
         return (
-            <div className={styles.buttonBar}>
+            <ButtonBar>
                 <button onClick={this.props.goUP}>Up</button>
                 <button onClick={this.props.goDOWN}>Down</button>
                 <button onClick={this.props.goLEFT}>Left</button>
                 <button onClick={this.props.goRIGHT}>Right</button>
-            </div>
+            </ButtonBar>
         )
     }
 }
