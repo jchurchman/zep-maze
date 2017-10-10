@@ -1,9 +1,0 @@
-:local(.player) {
-  margin: 20px auto; }
-  :local(.player) .viewport {
-    width: 146px;
-    height: 146px;
-    overflow: hidden;
-    position: relative;
-    margin: auto;
-    border: 2px solid orange; }
