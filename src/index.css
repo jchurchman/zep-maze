@@ -5,3 +5,27 @@
   padding: 0;
   font-family: sans-serif;
 }
+
+.wall {
+  background-color: #696969;
+}
+
+.wall:before {
+  background-image: "🜘";
+}
+
+.floor {
+  background-color: #C0C0C0;
+}
+
+.start {
+  background-color: #FFFF00;
+}
+
+.start:before {
+  content: "🜘";
+}
+
+.end {
+  background-color: #0000FF;
+}
