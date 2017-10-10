@@ -4,7 +4,8 @@ import { WALL, END } from '../Tile/Tile.constants';
 export const moveChecker = ({dispatch, getState }) => next => action => {
 	if(action.type !== MOVE ) return next(action);
 
-	const { maze } = getState();
+	const { game } = getState();
+	const { maze } = game;
 	const [x, y] = action.payload;
 	const tile = maze.matrix[y][x];  
 	if(!tile || tile === WALL) return;
