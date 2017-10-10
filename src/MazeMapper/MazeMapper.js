@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Tile } from '../Tile/Tile';
-import styles from './MazeMapper.css';
+import styled from 'styled-components';
+
+const Maze = styled.table`
+    border-collapse: collapse;
+    width: max-content;
+`
 
 export default class MazeMapper extends Component{
 
@@ -14,18 +19,18 @@ export default class MazeMapper extends Component{
         const transform = `translate( ${ xVal }px, ${ yVal }px )`;
 
         return (
-            <table className={styles.maze} style={{transform}}>
-                <tbody>
-                    {maze.matrix.map( ( row, index ) => {
-                        return (
-                            <tr key={index}>
-                            {row.map( ( tile, index ) => {
-                                return <Tile key={index} value={tile}/>
-                            })}
-                            </tr>
-                        )
-                    })}
-                </tbody>
-            </table>
+            <Maze style={{transform}}>
+                    <tbody>
+                        {maze.matrix.map( ( row, index ) => {
+                            return (
+                                <tr key={index}>
+                                {row.map( ( tile, index ) => {
+                                    return <Tile key={index} value={tile}/>
+                                })}
+                                </tr>
+                            )
+                        })}
+                    </tbody>
+            </Maze>
     )}
 }
