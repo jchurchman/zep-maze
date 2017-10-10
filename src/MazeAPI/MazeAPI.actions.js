@@ -1,25 +1,25 @@
 import * as actions from './constants';
 import api from './MazeAPI';
 
-// export function makeGetMazes(api) {
-// 	return function() {
-// 		return function(dispatch) {
-// 			dispatch({ type: actions.FETCHING_MAZES });
+export function makeGetMazes(api) {
+	return function() {
+		return function(dispatch) {
+			dispatch({ type: actions.FETCHING_MAZES });
 
-// 			return api.getAll()
-// 				.then(
-// 					mazes => {
-// 						dispatch({ type: actions.FETCHED_MAZES, payload: mazes });
-// 					}, 
-// 					error => {
-// 						dispatch({ type: actions.FETCHED_MAZE_ERROR, payload: error.error });
-// 					}
-// 				);
-// 		};
-// 	};
-// }
+			return api.getAll()
+				.then(
+					mazes => {
+						dispatch({ type: actions.FETCHED_MAZES, payload: mazes });
+					}, 
+					error => {
+						dispatch({ type: actions.FETCHED_MAZE_ERROR, payload: error.error });
+					}
+				);
+		};
+	};
+}
 
-// export const getMazes = makeGetMazes(api);
+export const getMazes = makeGetMazes(api);
 
 export const makeAddMaze = api => maze => dispatch => {
 
