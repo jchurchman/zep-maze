@@ -1,6 +1,6 @@
 import { MOVE, GAME_OVER, GAME_WIN } from './Controller.constants';
 
-export const position = (state = [ 0, 0 ], { type, payload }) => {
+export const position = (state = [ 1, 1 ], { type, payload }) => {
 	switch(type) {
 	case MOVE:
 		return payload;		
