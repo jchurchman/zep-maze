@@ -1,4 +1,4 @@
-import { MOVE, GAME_OVER, GAME_WIN } from './Controller.constants';
+import { MOVE, GAME_WIN } from './Controller.constants';
 import { WALL, END } from '../Tile/Tile.constants';
 
 export const moveChecker = ({dispatch, getState }) => next => action => {

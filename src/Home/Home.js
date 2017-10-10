@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { Navigate } from '../Navigate/Navigate';
 

@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { Tile } from '../Tile/Tile';
-import { connect } from 'react-redux';
 import styles from './MazeMapper.css';
 
-export class MazeMapper extends Component{
+export default class MazeMapper extends Component{
 
     render() {
-
         const { position, maze } = this.props;
 
-        // const matrix = maze.matrix;
-        
+
         const xVal = (position[0] - 1) * -48;
         const yVal = (position[1] - 1) * -48;
         
@@ -32,11 +29,3 @@ export class MazeMapper extends Component{
             </table>
     )}
 }
-
-export default connect(state => ({
-    position: state.position,
-    gamestate: state.gamestate,
-    maze: state.maze,
-    loading: state.loading,
-    error: state.error
-}))(MazeMapper);

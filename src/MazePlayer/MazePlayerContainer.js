@@ -7,10 +7,8 @@ import MazePlayer from './MazePlayer';
 
 function mapStateToProps(state) {
     return {
-        maze: state.maze,
+        game: state.game,
         position: state.position,
-        loading: state.loading,
-        error: state.error,
         gamestate: state.gamestate
     };
 }

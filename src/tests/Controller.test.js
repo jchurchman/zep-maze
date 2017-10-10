@@ -28,7 +28,7 @@ const testInit = (reducer, expected, initial) => {
     });
 };
 
-testPassThruAndInit(position, [0,0] , {operator: 'deepEqual'})
+testPassThruAndInit(position, [1,1] , {operator: 'deepEqual'})
 
 describe('Controller', () => {
 	describe('action creators', () => {
@@ -54,10 +54,10 @@ describe('Controller', () => {
 
 	describe('position reducer', () => {
 		testPassThru(position);
-		testInit(position, null, [0,0]);
+		testInit(position, null, [1,1]);
 
 		it('changed positions', () => {
-			const newPosition = { position: [0,3] }
+			const newPosition = { position: [1,3] }
 			assert.deepEqual(position(null, {
 				type: 'MOVE',
 				payload: newPosition
