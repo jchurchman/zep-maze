@@ -17,7 +17,7 @@ export default function MazePlayer({ game, position, gamestate }) {
                 <Avatar />
                 <MazeMapper maze={maze} position={position}/>
             </div>
-            <ControllerContainer maze={maze} position={position} />
+            <ControllerContainer />
         </div>
     )
 }

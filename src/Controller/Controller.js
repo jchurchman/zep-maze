@@ -20,6 +20,7 @@ class Controller extends Component {
     }
 
     render() {
+
         return (
             <div className={styles.buttonBar}>
                 <button onClick={this.props.goUP}>Up</button>

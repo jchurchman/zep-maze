@@ -4,12 +4,7 @@ import { goUP, goDOWN, goRIGHT, goLEFT } from './Controller.actions';
 import Controller from './Controller';
 
 function mapStateToProps(state){
-
-	return {
-		mazes: state.mazes,
-		position: state.position
-	};
-
+	return {};
 }
 
 function mapDispatchToProps(dispatch) {
