@@ -24,7 +24,7 @@ export default function Navigate() {
             <NavItem><NavLink to="/">Home</NavLink></NavItem>
             {/* <NavItem><NavLink to="/about">About</NavLink></NavItem> */}
             {/* <NavItem><NavLink to="/instructions">Instructions</NavLink></NavItem> */}
-            <NavItem><NavLink to="/play">Play</NavLink></NavItem>
+            <NavItem><NavLink to="/player">Play</NavLink></NavItem>
             {/* <NavItem><NavLink to="/build">Build</NavLink></NavItem> */}
         </NavList>
     );
