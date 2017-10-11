@@ -1,7 +1,7 @@
 import { MOVE, GAME_WIN } from './Controller.constants';
 import { WALL, END } from '../Tile/Tile.constants';
 
-export const moveChecker = ({dispatch, getState }) => next => action => {
+export const moveChecker = ({ dispatch, getState }) => next => action => {
 	if(action.type !== MOVE ) return next(action);
 
 	const { game } = getState();
