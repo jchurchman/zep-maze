@@ -13,10 +13,11 @@ import {
 
 const Hat = styled.div`
 background-color: #226764;
+border-bottom: 4px outset #22223B;
 h1 {
   text-align: center;
   font-family: 'Monoton', cursive;
-  color:white;
+  color: #87BCDE;
   font-size: 11vw;
   padding-top: 2vw;
   letter-spacing: 4px;
@@ -25,17 +26,19 @@ h1 {
 `
 
 const Shoe = styled.div`
-font: Arial;
-background: black;
-color: white;
+border-top: 4px outset #22223B;
+background-color: #226764;
 text-align: center;
 padding-top: 5px;
-position: absolute;
+position: fixed;
 left: 0;
 bottom: 0;
 right: 0;
 z-index: 5;
 clear: both;
+p {
+  color: #87BCDE;
+}
 `
 
 class App extends Component {

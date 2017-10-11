@@ -11,12 +11,19 @@ const NavList = styled.ul`
 `
 
 const NavItem = styled.li`
+    background-color: #226764;
     display: inline-block;
     list-style-type: none;
-    margin: 8px 20px 3px 20px;
+    margin: 8px 20px;
+    border: 4px outset #D0AC4C;
+    border-radius: 35px;
+    a {
+        padding: 3vw;
+        color: #D0AC4C;
+    }
 `
 
-const NavLink = props => <Link style={{ color: 'orange', textDecoration: 'none' }} {...props}/>;
+const NavLink = props => <Link style={{ color: '#D0AC4C', textDecoration: 'none' }} {...props}/>;
 
 export default function Navigate() {
     return (
