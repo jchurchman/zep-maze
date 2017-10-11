@@ -18,12 +18,12 @@ const NavItem = styled.li`
 
 const NavLink = props => <Link style={{ color: 'orange', textDecoration: 'none' }} {...props}/>;
 
-export function Navigate() {
+export default function Navigate() {
     return (
         <NavList>
             <NavItem><NavLink to="/">Home</NavLink></NavItem>
-            <NavItem><NavLink to="/about">About</NavLink></NavItem>
-            <NavItem><NavLink to="/instructions">Instructions</NavLink></NavItem>
+            {/* <NavItem><NavLink to="/about">About</NavLink></NavItem> */}
+            {/* <NavItem><NavLink to="/instructions">Instructions</NavLink></NavItem> */}
             <NavItem><NavLink to="/play">Play</NavLink></NavItem>
             {/* <NavItem><NavLink to="/build">Build</NavLink></NavItem> */}
         </NavList>

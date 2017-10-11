@@ -20,7 +20,7 @@ h1 {
 const Header = (
     <Hat>
         <h1>Zep Maze!</h1>
-        {/* <Navigate/> */}
+        <Navigate/>
     </Hat>
 );
 
