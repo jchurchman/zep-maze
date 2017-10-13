@@ -11,20 +11,27 @@ const NavList = styled.ul`
 `
 
 const NavItem = styled.li`
+    background-color: #226764;
     display: inline-block;
     list-style-type: none;
-    margin: 8px 20px 3px 20px;
+    margin: 8px 20px;
+    border: 4px outset #D0AC4C;
+    border-radius: 35px;
+    a {
+        padding: 3vw;
+        color: #D0AC4C;
+    }
 `
 
-const NavLink = props => <Link style={{ color: 'orange', textDecoration: 'none' }} {...props}/>;
+const NavLink = props => <Link style={{ color: '#D0AC4C', textDecoration: 'none' }} {...props}/>;
 
-export function Navigate() {
+export default function Navigate() {
     return (
         <NavList>
             <NavItem><NavLink to="/">Home</NavLink></NavItem>
-            <NavItem><NavLink to="/about">About</NavLink></NavItem>
-            <NavItem><NavLink to="/instructions">Instructions</NavLink></NavItem>
-            <NavItem><NavLink to="/play">Play</NavLink></NavItem>
+            {/* <NavItem><NavLink to="/about">About</NavLink></NavItem> */}
+            {/* <NavItem><NavLink to="/instructions">Instructions</NavLink></NavItem> */}
+            <NavItem><NavLink to="/player">Play</NavLink></NavItem>
             {/* <NavItem><NavLink to="/build">Build</NavLink></NavItem> */}
         </NavList>
     );

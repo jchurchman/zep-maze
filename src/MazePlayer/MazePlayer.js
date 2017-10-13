@@ -14,7 +14,7 @@ const Viewport = styled.div`
     overflow: hidden;
     position: relative;
     margin: auto;
-    border: 2px solid orange;
+    border: 6px outset #D0AC4C;
 `
 
 export default function MazePlayer({ game, position, gamestate }) {
