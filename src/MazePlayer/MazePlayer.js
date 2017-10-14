@@ -26,6 +26,9 @@ export default function MazePlayer({ game, position, gamestate }) {
     return (
 
         <Player>
+            {(gamestate === 'SOLVED') && 
+                <p style={{textAlign: 'center'}}>You've solved the maze!<br/>Hit refresh to try again.</p>
+            }
             <Viewport>
                 <Avatar />
                 <MazeMapper maze={maze} position={position}/>
