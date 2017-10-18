@@ -3,15 +3,14 @@ import styled from 'styled-components';
 
 const Mat = styled.h1`
     text-align: center;
-    margin: 6vw auto;
+    margin: 4vw auto;
     font-size: 6vw;
-    padding: 1vw;
     font-family: 'Audiowide', cursive, sans-serif;
     text-shadow: 1px 1px 6px #19647E
 `
 
 const Welcome = styled.p`
-    margin: auto 4vw; 
+    margin: auto 4vw 4vw 4vw; 
     font-size: 3vw;
     text-align: justify;
 `

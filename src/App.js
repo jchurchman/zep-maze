@@ -18,8 +18,7 @@ h1 {
   text-align: center;
   font-family: 'Monoton', cursive;
   color: #87BCDE;
-  font-size: 11vw;
-  padding-top: 2vw;
+  font-size: 10vw;
   letter-spacing: 4px;
   font-weight: normal;
 }
