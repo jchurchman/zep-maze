@@ -9,8 +9,8 @@ const Player = styled.div`
 `
 
 const Viewport = styled.div`
-    width: 60vw;
-    height: 60vw;
+    width: 48vw;
+    height: 48vw;
     overflow: hidden;
     position: relative;
     margin: auto;

@@ -12,10 +12,10 @@ const Sprite = styled.span`
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    font-size: 15vw;
+    font-size: 12vw;
 `
 
-const transform = `translate(0.6vw, -0.4vw)`;
+const transform = `translate(0.4vw, -0.4vw)`;
 
 export default function Avatar() {
     
