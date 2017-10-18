@@ -1,5 +1,4 @@
 import React from 'react';
-import  Emojify from 'react-emojione';
 import styled from 'styled-components';
 
 const Sprite = styled.span`

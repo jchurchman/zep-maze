@@ -1,14 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Avatar Component renders a winky face emoji by default 1`] = `
-<styled.div>
-  <Emoji
-    codepoint="1f609"
+<styled.span>
+  <span
+    aria-label="neutral face"
+    role="img"
     style={
       Object {
-        "top": 0,
+        "transform": "translate(0.6vw, -0.4vw)",
       }
     }
-  />
-</styled.div>
+  >
+    😐
+  </span>
+</styled.span>
 `;

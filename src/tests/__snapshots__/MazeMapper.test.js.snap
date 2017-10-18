@@ -4,7 +4,7 @@ exports[`MazeMapper component renders a maze table when given a maze object 1`] 
 <styled.table
   style={
     Object {
-      "transform": "translate( 0px, 0px )",
+      "transform": "translate( 0vw, 0vw )",
     }
   }
 >
