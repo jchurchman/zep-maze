@@ -29,7 +29,7 @@ border-top: 4px outset #22223B;
 background-color: #226764;
 text-align: center;
 padding-top: 5px;
-position: fixed;
+position: relative;
 left: 0;
 bottom: 0;
 right: 0;

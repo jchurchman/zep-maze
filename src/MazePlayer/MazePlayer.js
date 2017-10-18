@@ -5,7 +5,10 @@ import ControllerContainer from '../Controller/ControllerContainer';
 import styled from 'styled-components';
 
 const Player = styled.div`
-    margin: 20px auto;
+    margin: 4vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 `
 
 const Viewport = styled.div`

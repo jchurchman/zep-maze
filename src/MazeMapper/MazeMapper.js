@@ -13,8 +13,8 @@ export default class MazeMapper extends Component{
         const { position, maze } = this.props;
 
 
-        const xVal = (position[0] - 1) * -18;
-        const yVal = (position[1] - 1) * -18;
+        const xVal = (position[0] - 1) * -16;
+        const yVal = (position[1] - 1) * -16;
         
         const transform = `translate( ${ xVal }vw, ${ yVal }vw )`;
 
