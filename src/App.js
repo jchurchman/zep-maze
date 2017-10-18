@@ -29,11 +29,11 @@ border-top: 4px outset #22223B;
 background-color: #226764;
 text-align: center;
 padding-top: 5px;
-position: relative;
+position: fixed;
 left: 0;
 bottom: 0;
 right: 0;
-z-index: 5;
+z-index: 1000;
 clear: both;
 p {
   color: #87BCDE;
