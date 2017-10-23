@@ -1,25 +1,18 @@
-import { MODALVIEW, RETURN, NEXT } from './Modal.constants';
+import { OPENMODAL, CLOSEMODAL, RETURN, NEXT } from './Modal.constants';
 
 export function openModal() {
     return dispatch => {
         dispatch({
-            type: MODALVIEW
+            type: OPENMODAL
         })
     }
 }
 
-export function returnToMaze() {
+export function closeModal() {
     return dispatch => {
         dispatch({
-            type: RETURN
+            type: CLOSEMODAL
         })
     }
 }
 
-export function nextMaze() {
-    return dispatch => {
-        dispatch({
-            type: NEXT
-        })
-    }
-}

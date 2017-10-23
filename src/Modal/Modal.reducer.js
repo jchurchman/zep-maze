@@ -5,10 +5,9 @@ export default ( state = {}, action ) => combineReducers({modalIsOpen})(state, a
 
 export function modalIsOpen( state = false, action ) {
     switch(action.type) {
-        case actions.MODALVIEW:
+        case actions.OPENMODAL:
             return true;
-        case actions.RETURN:
-        case actions.NEXT:
+        case actions.CLOSEMODAL:
             return false;
         default: return state;
     }

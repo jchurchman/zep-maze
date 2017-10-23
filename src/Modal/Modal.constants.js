@@ -1,3 +1,2 @@
-export const MODALVIEW = 'MODALVIEW';
-export const RETURN = 'RETURN';
-export const NEXT = 'NEXT';
+export const OPENMODAL = 'OPENMODAL';
+export const CLOSEMODAL = 'CLOSEMODAL';

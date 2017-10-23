@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import Modal from 'react-modal';
-import { openModal, returnToMaze, nextMaze } from './Modal.actions';
+import Modal from './Modal';
+import { openModal, closeModal } from './Modal.actions';
 
 function mapStateToProps(state) {
     const { modalIsOpen } = state.modal;
@@ -13,8 +13,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         openModal() { dispatch(openModal());},
-        returnToMaze() { dispatch(returnToMaze());},
-        nextMaze() { dispatch(nextMaze());}
+        closeModal() { dispatch(closeModal());},
+
     }
 }
 
