@@ -10,8 +10,8 @@ const DirButton = styled.button`
     background-color: #226764;
     margin: .3vw;
     padding: .5vw;
-    width: 8vw;
-    height: 8vw;
+    width: 10vw;
+    height: 10vw;
     border: 4px outset #D0AC4C;
     border-radius: 8px;
     font-size: 4vw;

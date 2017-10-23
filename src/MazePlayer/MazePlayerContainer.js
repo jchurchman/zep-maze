@@ -14,7 +14,6 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    // dispatch(getMazes());
     dispatch(getOneMaze('59b033f164889f1fd460af85'));
     return bindActionCreators({ getMazes, getOneMaze, addMaze }, dispatch);
 }

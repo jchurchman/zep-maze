@@ -5,12 +5,15 @@ import ControllerContainer from '../Controller/ControllerContainer';
 import styled from 'styled-components';
 
 const Player = styled.div`
-    margin: 20px auto;
+    margin: 4vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 `
 
 const Viewport = styled.div`
-    width: 146px;
-    height: 146px;
+    width: 48vw;
+    height: 48vw;
     overflow: hidden;
     position: relative;
     margin: auto;
@@ -26,6 +29,9 @@ export default function MazePlayer({ game, position, gamestate }) {
     return (
 
         <Player>
+            {(gamestate === 'SOLVED') && 
+                <p style={{textAlign: 'center'}}>You've solved the maze!<br/>Hit refresh to try again.</p>
+            }
             <Viewport>
                 <Avatar />
                 <MazeMapper maze={maze} position={position}/>

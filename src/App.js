@@ -18,8 +18,7 @@ h1 {
   text-align: center;
   font-family: 'Monoton', cursive;
   color: #87BCDE;
-  font-size: 11vw;
-  padding-top: 2vw;
+  font-size: 10vw;
   letter-spacing: 4px;
   font-weight: normal;
 }
@@ -34,7 +33,7 @@ position: fixed;
 left: 0;
 bottom: 0;
 right: 0;
-z-index: 5;
+z-index: 1000;
 clear: both;
 p {
   color: #87BCDE;
