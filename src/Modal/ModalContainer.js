@@ -12,9 +12,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        openModal() { dispatch(openModal());},
         closeModal() { dispatch(closeModal());},
-
+        restartMaze() {dispatch(restartMaze());},
+        nextMaze() {dispatch(nextMaze());}
     }
 }
 
