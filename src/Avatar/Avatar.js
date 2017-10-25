@@ -11,7 +11,7 @@ const Sprite = styled.span`
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 900;
+    z-index: 400;
     font-size: 12vw;
 `
 
