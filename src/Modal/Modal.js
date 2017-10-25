@@ -29,7 +29,7 @@ const Fore = styled.div`
 `
 
 export default function Modal(props) {
-    const { modalIsOpen, closeModal, restartMaze, nextMaze } = props;
+    const { modalIsOpen, closeModal, resetMaze } = props;
 
     if (modalIsOpen) {
         return (
@@ -39,12 +39,8 @@ export default function Modal(props) {
                     {props.children}
                     <button onClick={() => {
                         closeModal()
-                        restartMaze()
+                        resetMaze()
                     }}>Restart Maze</button>
-                    <button onClick={() => {
-                        closeModal()
-                        nextMaze()
-                    }}>Next Maze</button>
                 </Fore>
             </Back>
     )} else { return null }

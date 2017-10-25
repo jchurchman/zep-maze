@@ -1,8 +1,9 @@
-import { MOVE } from './Controller.constants';
+import { MOVE, RESET_MAZE } from './Controller.constants';
 
 export function goUP() {
 	return (dispatch, getState) => {
-		const { position } = getState();
+		const { status } = getState();
+		const { position } = status;
 		dispatch({
 			type: MOVE,
 			payload: [position[0], position[1] - 1]
@@ -12,7 +13,8 @@ export function goUP() {
 
 export function goDOWN() {
 	return (dispatch, getState) => {
-		const { position } = getState();
+		const { status } = getState();
+		const { position } = status;
 		dispatch({
 			type: MOVE,
 			payload: [position[0], position[1] + 1]
@@ -22,7 +24,8 @@ export function goDOWN() {
 
 export function goRIGHT() {
 	return (dispatch, getState) => {
-		const { position } = getState();
+		const { status } = getState();
+		const { position } = status;
 		dispatch({
 			type: MOVE,
 			payload: [position[0] + 1, position[1] ]
@@ -32,10 +35,19 @@ export function goRIGHT() {
 
 export function goLEFT() {
 	return (dispatch, getState) => {
-		const { position } = getState();
+		const { status } = getState();
+		const { position } = status;
 		dispatch({
 			type: MOVE,
 			payload: [ position[0] - 1, position[1] ]
 		});
 	};
+}
+
+export function resetMaze() {
+	return dispatch => {
+		dispatch({
+			type: RESET_MAZE
+		})
+	}
 }

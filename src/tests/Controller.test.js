@@ -5,7 +5,7 @@ import assert from 'assert';
 
 const testPassThruAndInit = (reducer, initial, { operator = 'strictEqual' } = {}) => {
     it('pass-thru', () => {
-        const state = { position: [0,0], gamestate: 'ACTIVE'};
+        const state = { position: [0,0], gamestate: 'PLAYING'};
         assert[operator](reducer(state, { type: 'NO_ACTION' }), state);
     })
 
@@ -67,7 +67,7 @@ describe('Controller', () => {
 	
 	describe('gamestate reducer', () => {
 		testPassThru(gamestate);
-		testInit(gamestate, null, 'ACTIVE');
+		testInit(gamestate, null, 'PLAYING');
 
 		it('changed gamestates', () => {
 			const newGameState = { gamestate: 'GAME_WIN' }

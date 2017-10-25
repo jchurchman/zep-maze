@@ -1,6 +1,7 @@
 import React from 'react';
 import MazeMapper from '../MazeMapper/MazeMapper';
 import Avatar from '../Avatar/Avatar';
+import ModalContainer from '../Modal/ModalContainer';
 import ControllerContainer from '../Controller/ControllerContainer';
 import styled from 'styled-components';
 
@@ -20,8 +21,9 @@ const Viewport = styled.div`
     border: 6px outset #D0AC4C;
 `
 
-export default function MazePlayer({ game, position, gamestate }) {
+export default function MazePlayer({ game, status }) {
     const { maze, error, loading } = game;
+    const { position } = status;
 
     if( loading || !maze ) return <div>Loading Mazes...</div>;
     if (error) return <div>There was an error loading this maze, try refreshing the page</div>;
@@ -29,13 +31,13 @@ export default function MazePlayer({ game, position, gamestate }) {
     return (
 
         <Player>
-            {(gamestate === 'SOLVED') && 
-                <p style={{textAlign: 'center'}}>You've solved the maze!<br/>Hit refresh to try again.</p>
-            }
             <Viewport>
                 <Avatar />
                 <MazeMapper maze={maze} position={position}/>
             </Viewport>
+            <ModalContainer>
+                <p>Congratulations, you solved the maze!</p>
+            </ModalContainer>
             <ControllerContainer />
         </Player>
     )

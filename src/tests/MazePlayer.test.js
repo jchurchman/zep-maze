@@ -34,7 +34,7 @@ describe('MazePlayer component', () => {
         const wrapper = shallow(<MazePlayer 
             game={{badGame}}
             position={[ 1, 1 ]}
-            gamestate={'ACTIVE'}
+            gamestate={'PLAYING'}
         />);
         expect(toJSON(wrapper)).toMatchSnapshot();
     })
@@ -44,7 +44,7 @@ describe('MazePlayer component', () => {
             <MazePlayer 
                 game={{goodGame}}
                 position={[ 1, 1]}
-                gamestate={'ACTIVE'}  
+                gamestate={'PLAYING'}  
             />
             );
         expect(toJSON(wrapper)).toMatchSnapshot();

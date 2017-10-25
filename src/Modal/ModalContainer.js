@@ -1,20 +1,18 @@
 import { connect } from 'react-redux';
 import Modal from './Modal';
-import { openModal, closeModal } from './Modal.actions';
+import { closeModal } from './Modal.actions';
+import { resetMaze } from '../Controller/Controller.actions';
 
 function mapStateToProps(state) {
-    const { modalIsOpen } = state.modal;
-
     return {
-        modalIsOpen
+        modalIsOpen: state.modalIsOpen
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
         closeModal() { dispatch(closeModal());},
-        restartMaze() {dispatch(restartMaze());},
-        nextMaze() {dispatch(nextMaze());}
+        resetMaze() {dispatch(resetMaze());},
     }
 }
 

@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-import { position, gamestate } from './Controller/Controller.reducer';
+import status from './Controller/Controller.reducer';
 import game from './MazeAPI/reducer';
+import { modalIsOpen } from './Modal/Modal.reducer';
 
 export default combineReducers({
-	position,
-	gamestate,
+	status,
 	game,
+	modalIsOpen
 });

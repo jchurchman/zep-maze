@@ -1,9 +1,6 @@
 import * as actions from './Modal.constants';
-import { combineReducers } from 'redux';
 
-export default ( state = {}, action ) => combineReducers({modalIsOpen})(state, action);
-
-export function modalIsOpen( state = false, action ) {
+export const modalIsOpen = ( state = false, action ) => {
     switch(action.type) {
         case actions.OPENMODAL:
             return true;
