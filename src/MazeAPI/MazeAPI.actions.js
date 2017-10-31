@@ -1,8 +1,7 @@
 import * as actions from './constants';
 import api from './MazeAPI';
 
-export function makeGetMazes(api) {
-	return function() {
+export const makeFetchMazes = api => dispatch => {
 		return function(dispatch) {
 			dispatch({ type: actions.FETCHING_MAZES });
 
@@ -10,16 +9,16 @@ export function makeGetMazes(api) {
 				.then(
 					mazes => {
 						dispatch({ type: actions.FETCHED_MAZES, payload: mazes });
+						dispatch(getOneMaze(mazes[0]._id))
 					}, 
 					error => {
 						dispatch({ type: actions.FETCHED_MAZES_ERROR, payload: error.error });
 					}
 				);
 		};
-	};
 }
 
-export const getMazes = makeGetMazes(api);
+export const fetchMazes = makeFetchMazes(api);
 
 export const makeAddMaze = api => maze => dispatch => {
 

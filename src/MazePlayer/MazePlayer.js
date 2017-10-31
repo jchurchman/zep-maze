@@ -22,7 +22,7 @@ const Viewport = styled.div`
 `
 
 export default function MazePlayer({ game, status }) {
-    const { maze, error, loading } = game;
+    const { mazes, maze, error, loading } = game;
     const { position } = status;
 
     if( loading || !maze ) return <div>Loading Mazes...</div>;
