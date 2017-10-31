@@ -17,7 +17,7 @@ const testInit = (reducer, expected, initial) => {
 
 const testPassThruAndInit = (reducer, initial, { operator = 'strictEqual' } = {}) => {
     it('pass-thru', () => {
-        const state = {maze: null, error: null, loading: false};
+        const state = {maze: null, error: null, loading: false, mazes: []};
         assert[operator](reducer(state, { type: 'NO_ACTION' }), state);
     })
 
@@ -28,7 +28,7 @@ const testPassThruAndInit = (reducer, initial, { operator = 'strictEqual' } = {}
 
 describe('mazeAPI combined reducer', () => {
     testPassThruAndInit(mazeAPI, 
-    { maze: null, error: null, loading: false }, 
+    { mazes: [], maze: null, error: null, loading: false }, 
     {operator: 'deepEqual'})
 })
 
