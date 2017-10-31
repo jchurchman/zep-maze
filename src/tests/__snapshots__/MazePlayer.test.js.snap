@@ -7,7 +7,65 @@ exports[`MazePlayer component renders a  loading div when no maze passed 1`] = `
 `;
 
 exports[`MazePlayer component renders a div with a maze and an avatar when child components passed 1`] = `
-<div>
-  Loading Mazes...
-</div>
+<styled.div>
+  <styled.div>
+    <Avatar />
+    <MazeMapper
+      maze={
+        Object {
+          "matrix": Array [
+            Array [
+              "WALL",
+              "WALL",
+              "WALL",
+              "WALL",
+              "WALL",
+            ],
+            Array [
+              "WALL",
+              "START",
+              "WALL",
+              "END",
+              "WALL",
+            ],
+            Array [
+              "WALL",
+              "FLOOR",
+              "WALL",
+              "FLOOR",
+              "WALL",
+            ],
+            Array [
+              "WALL",
+              "FLOOR",
+              "FLOOR",
+              "FLOOR",
+              "WALL",
+            ],
+            Array [
+              "WALL",
+              "WALL",
+              "WALL",
+              "WALL",
+              "WALL",
+            ],
+          ],
+          "score": Array [],
+        }
+      }
+      position={
+        Array [
+          1,
+          1,
+        ]
+      }
+    />
+  </styled.div>
+  <Connect(Modal)>
+    <p>
+      Congratulations, you solved the maze!
+    </p>
+  </Connect(Modal)>
+  <Connect(Controller) />
+</styled.div>
 `;

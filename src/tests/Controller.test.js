@@ -1,11 +1,11 @@
 import { goUP, goDOWN, goRIGHT, goLEFT } from '../Controller/Controller.actions';
 import { MOVE } from '../Controller/Controller.constants';
-import { position, gamestate } from '../Controller/Controller.reducer';
+import { position, activity } from '../Controller/Controller.reducer';
 import assert from 'assert';
 
 const testPassThruAndInit = (reducer, initial, { operator = 'strictEqual' } = {}) => {
     it('pass-thru', () => {
-        const state = { position: [0,0], gamestate: 'ACTIVE'};
+        const state = { position: [0,0], activity: 'PLAYING'};
         assert[operator](reducer(state, { type: 'NO_ACTION' }), state);
     })
 
@@ -41,7 +41,7 @@ describe('Controller', () => {
 						expect(action.type).toBe(MOVE);
 						expect(action.payload).toEqual(expected)
 					},
-					() => ({ position: initial})
+					() => ({ status: { position: initial }})
 				)
 			});
 		}
@@ -65,16 +65,16 @@ describe('Controller', () => {
 		})
 	})
 	
-	describe('gamestate reducer', () => {
-		testPassThru(gamestate);
-		testInit(gamestate, null, 'ACTIVE');
+	describe('activity reducer', () => {
+		testPassThru(activity);
+		testInit(activity, null, 'PLAYING');
 
-		it('changed gamestates', () => {
-			const newGameState = { gamestate: 'GAME_WIN' }
-			assert.deepEqual(gamestate(null, {
+		it('changed activitys', () => {
+			const newActivity = { activity: 'GAME_WIN' }
+			assert.deepEqual(activity(null, {
 				type: 'GAME_WIN',
-				payload: newGameState
-			}), newGameState)
+				payload: newActivity
+			}), newActivity)
 		})
 	})
 });

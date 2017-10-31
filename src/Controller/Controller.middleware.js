@@ -1,4 +1,5 @@
 import { MOVE, GAME_WIN } from './Controller.constants';
+import { OPENMODAL } from '../Modal/Modal.constants'
 import { WALL, END } from '../Tile/Tile.constants';
 
 export const moveChecker = ({ dispatch, getState }) => next => action => {
@@ -12,6 +13,7 @@ export const moveChecker = ({ dispatch, getState }) => next => action => {
 	if(tile === END) {
 		next(action);
 		next({ type: GAME_WIN, payload: 'SOLVED' });
+		next({ type: OPENMODAL })
 		return;
 	}
 	// if(tile === FIRE) return next({ type: GAME_OVER });
