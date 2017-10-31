@@ -2,17 +2,21 @@ import { connect } from 'react-redux';
 import Modal from './Modal';
 import { closeModal } from './Modal.actions';
 import { resetMaze } from '../Controller/Controller.actions';
+import { getOneMaze } from '../MazeAPI/MazeAPI.actions';
 
 function mapStateToProps(state) {
     return {
-        modalIsOpen: state.modalIsOpen
+        modalIsOpen: state.modalIsOpen,
+        game: state.game
     }
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch =>  {
+
     return {
         closeModal() { dispatch(closeModal());},
         resetMaze() {dispatch(resetMaze());},
+        getNextMaze(id) {dispatch(getOneMaze(id))}
     }
 }
 

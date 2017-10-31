@@ -58,7 +58,17 @@ const ModalButton = styled.button`
 `
 
 export default function Modal(props) {
-    const { modalIsOpen, closeModal, resetMaze } = props;
+    const {     modalIsOpen, 
+                closeModal, 
+                resetMaze, 
+                getNextMaze,
+                game } = props;
+
+    const { mazes, maze } = game;
+
+    const thisMaze = mazes.findIndex(m => m._id === maze._id)
+    const nextMazesMaze = mazes[thisMaze + 1] || mazes[0];
+    const nextMazeId = nextMazesMaze._id
 
     if (modalIsOpen) {
         return (
@@ -71,6 +81,11 @@ export default function Modal(props) {
                             closeModal()
                             resetMaze()
                         }}>Restart</ModalButton>
+                        <ModalButton onClick={() => {
+                            closeModal()
+                            getNextMaze(nextMazeId)
+                            resetMaze()
+                        }}>Next</ModalButton>
                     </ButtonBar>
                 </Fore>
             </Back>
