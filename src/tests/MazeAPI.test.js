@@ -3,9 +3,9 @@ import {
     makeGetOneMaze 
     } from '../MazeAPI/MazeAPI.actions';
 import { 
-    FETCHED_MAZE, 
-    FETCHING_MAZE,
-    FETCHED_MAZE_ERROR,
+    GOT_MAZE, 
+    GETTING_MAZE,
+    GOT_MAZE_ERROR,
     ADDED_MAZE,
     ADDING_MAZE,
     ADDING_MAZE_ERROR
@@ -24,8 +24,8 @@ describe('getOneMaze', () => {
         return getOneMaze()(dispatch)
             .then( () => {
                 expect(dispatched).toEqual([
-                    { type: FETCHING_MAZE },
-                    { type: FETCHED_MAZE, payload: maze }
+                    { type: GETTING_MAZE },
+                    { type: GOT_MAZE, payload: maze }
                 ]);
             });
     });
@@ -40,8 +40,8 @@ describe('getOneMaze', () => {
         return getOneMaze()(dispatch)
             .then( () => {
                 expect(dispatched).toEqual([
-                    { type: FETCHING_MAZE },
-                    { type: FETCHED_MAZE_ERROR, payload: {error: 'the error'} }
+                    { type: GETTING_MAZE },
+                    { type: GOT_MAZE_ERROR, payload: {error: 'the error'} }
                 ]);
             });
     });

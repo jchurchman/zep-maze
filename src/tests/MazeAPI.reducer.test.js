@@ -40,7 +40,7 @@ describe('maze reducer', () => {
     it('fetched', () => {
         const mazeState = { maze: [['WALL']]};
         assert.deepEqual(maze(null, {
-            type: 'FETCHED_MAZE',
+            type: 'GOT_MAZE',
             payload: mazeState
         }), mazeState);
     });

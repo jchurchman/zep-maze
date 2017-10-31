@@ -12,7 +12,7 @@ export function makeGetMazes(api) {
 						dispatch({ type: actions.FETCHED_MAZES, payload: mazes });
 					}, 
 					error => {
-						dispatch({ type: actions.FETCHED_MAZE_ERROR, payload: error.error });
+						dispatch({ type: actions.FETCHED_MAZES_ERROR, payload: error.error });
 					}
 				);
 		};
@@ -39,15 +39,15 @@ export const makeAddMaze = api => maze => dispatch => {
 export const addMaze = makeAddMaze(api);
 
 export const makeGetOneMaze = api => id => dispatch => {
-	dispatch({ type: actions.FETCHING_MAZE });
+	dispatch({ type: actions.GETTING_MAZE });
 
 	return api.get(id)
 		.then(
 			maze => {
-				dispatch({ type: actions.FETCHED_MAZE, payload: maze });
+				dispatch({ type: actions.GOT_MAZE, payload: maze });
 			},
 			err => {
-				dispatch({ type: actions.FETCHED_MAZE_ERROR, payload: err });
+				dispatch({ type: actions.GOT_MAZE_ERROR, payload: err });
 			}
 		);
 };
